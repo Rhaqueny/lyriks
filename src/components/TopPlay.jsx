@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -22,11 +23,11 @@ const TopChartCard = ({ song, i, isPlaying, activeSong, handlePauseClick, handle
             {song?.title}
           </p>
         </Link>
-        <Link to={`/artists/${song?.artists[0].adamid}`}>
+        {/* <Link to={`/artists/${song?.artists[0].adamid}`}>
           <p className="text-base text-gray-300 mt-1">
             {song?.subtitle}
           </p>
-        </Link>
+        </Link> */}
       </div>
     </div>
     <PlayPause
@@ -108,9 +109,9 @@ const TopPlay = () => {
               style={{ width: '25%', height: 'auto' }}
               className="shadow-lg rounded-full animate-slideright"
             >
-              <Link to={`/artists/${artist?.artists[0].adamid}`}>
+              {/* <Link to={`/artists/${artist?.artists[0].adamid}`}>
                 <img src={artist?.images?.background} alt="Name" className="rounded-full w-full object-cover" />
-              </Link>
+              </Link> */}
             </SwiperSlide>
           ))}
         </Swiper>
